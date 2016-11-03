@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
+    moduleId: module.id,
     selector: 'my-app',
-    template: `
-        <h1 highlight>{{title}}</h1>
-        <div highlight>test</div>
-    `,
+    templateUrl: 'app.component.html'
 })
 export class AppComponent {
-    title = 'Minimal NgModule';
+
 }

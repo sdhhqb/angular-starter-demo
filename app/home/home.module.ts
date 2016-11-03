@@ -1,7 +1,11 @@
-import { NgModule }           from '@angular/core';
+import { NgModule } from '@angular/core';
+import { SharedModule } from '../shared/shared.module';
+import { HomeComponent } from './home.component';
+import { HomeRoutingModule } from './home-routing.module';
+
 @NgModule({
-    imports:      [ ],
-    declarations: [ ],
+    imports:      [ SharedModule, HomeRoutingModule ],
+    declarations: [ HomeComponent ],
     providers:    [ ]
 })
-export class ContactModule { }
+export class HomeModule { }
