@@ -1,0 +1,13 @@
+.todo-list {
+    min-width: 320px;
+}
+.list-item {
+    line-height:36px;
+    overflow: hidden;
+}
+.todo-info {
+    float: left;
+    width: 33%;
+    word-wrap: break-word;
+    word-break: break-all;
+}

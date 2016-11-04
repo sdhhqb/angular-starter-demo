@@ -5,12 +5,13 @@ import {
 import { CommonModule }      from '@angular/common';
 
 import { TitleComponent } from './title.component';
+import { TodoService } from './todo.service';
 
 @NgModule({
     imports: [ CommonModule ],
     declarations: [ TitleComponent ],
-    exports: [TitleComponent ],
-    providers: []
+    exports: [ TitleComponent ],
+    providers: [ TodoService ]
 })
 export class CoreModule {
     constructor (@Optional() @SkipSelf() parentModule: CoreModule) {

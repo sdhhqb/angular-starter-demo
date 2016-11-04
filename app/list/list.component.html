@@ -1,1 +1,10 @@
 <div>list page</div>
+<div class="todo-list">
+    <div class="list-item" *ngFor="let todo of todos">
+        <span class="todo-info name">{{todo.name}}</span>
+        <span class="todo-info date">{{todo.date}}</span>
+        <span class="todo-info finish">
+            <i (click)="toggleTodo(todo)" class="{{todo.finish ? 'done' : 'undo'}}">done {{todo.finish}}</i>
+        </span>
+    </div>
+</div>
