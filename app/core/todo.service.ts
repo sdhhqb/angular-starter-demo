@@ -22,7 +22,7 @@ var todoStore = JSON.stringify([
 export class TodoService {
 
     getTodos() {
-        var todos = JSON.parse(todoStore);
+        var todos: Todo[] = JSON.parse(todoStore);
         return new Promise<Todo[]>(resolve => {
             setTimeout(() => {
                 resolve(todos);
@@ -30,8 +30,8 @@ export class TodoService {
         });
     }
 
-    updateTodo(todo) {
-        var todos = JSON.parse(todoStore);
+    updateTodo(todo: Todo) {
+        var todos: Todo[] = JSON.parse(todoStore);
         todos.forEach((item, index) => {
             if (item.id == todo.id) {
                 todos[index] = todo;

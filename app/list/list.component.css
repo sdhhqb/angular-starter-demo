@@ -11,3 +11,6 @@
     word-wrap: break-word;
     word-break: break-all;
 }
+.todo-info.finish > i {
+    cursor: pointer;
+}

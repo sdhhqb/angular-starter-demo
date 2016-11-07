@@ -10,6 +10,8 @@ export class ListComponent implements OnInit {
 
     todos: Todo[];
 
+    filterDone: boolean = true;
+
     constructor(private todoService: TodoService) {
 
     }
@@ -23,7 +25,7 @@ export class ListComponent implements OnInit {
     toggleTodo (todo: Todo) {
         todo['finish'] = !todo['finish'];
         this.todoService.updateTodo(todo).then(res => {
-            console.log(res);
+            console.log('update todo, ' + res);
         });
     }
 }

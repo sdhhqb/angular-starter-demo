@@ -1,10 +1,27 @@
-<div>list page</div>
+<h3>list page</h3>
+<div>
+    <label for="filter_done">
+        <input id="filter_done" [(ngModel)]="filterDone" type="checkbox">show-done
+    </label>
+</div>
+<div class="todo-list list-header">
+    <div class="list-item">
+        <span class="todo-info name">name</span>
+        <span class="todo-info date">date</span>
+        <span class="todo-info finish">finished</span>
+    </div>
+</div>
 <div class="todo-list">
-    <div class="list-item" *ngFor="let todo of todos">
+    <div
+        class="list-item {{todo.finish && !filterDone ? 'hide' : ''}}"
+        *ngFor="let todo of todos">
         <span class="todo-info name">{{todo.name}}</span>
         <span class="todo-info date">{{todo.date}}</span>
         <span class="todo-info finish">
-            <i (click)="toggleTodo(todo)" class="{{todo.finish ? 'done' : 'undo'}}">done {{todo.finish}}</i>
-        </span>
+        <i
+                (click)="toggleTodo(todo)"
+                class="{{todo.finish ? 'done' : 'undo'}}"
+        >{{todo.finish}}</i>
+    </span>
     </div>
 </div>
